@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private string nextSceneName;
     [SerializeField] private LayoutManager layoutManager;
     [SerializeField] private int ExplodeBubbleCount = 0;
+    [SerializeField] private int level = 0;
 
 
     public void ExplodeBubble()
@@ -13,12 +14,36 @@ public class LevelManager : MonoBehaviour
         ExplodeBubbleCount++;
         if (ExplodeBubbleCount >= layoutManager.count)
         {
-            CompleteLevel();
+            CompleteLevel(level);
         }
     }
-    public void CompleteLevel()
+    public void CompleteLevel(int Level)
     {
-        DATA.Trophy1 = true;
-        SceneManager.LoadScene(nextSceneName);
+        switch (Level)
+        {
+            case 1:
+                DATA.Trophy1 = true;
+                break;
+            case 2:
+                DATA.Trophy2 = true;
+                break;
+            case 3:
+                DATA.Trophy3 = true;
+                break;
+            case 4:
+                DATA.Trophy4 = true;
+                break;
+            case 5:
+                DATA.Trophy5 = true;
+                break;
+        }
+        SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
     }
+
+    public void ToScene(int Level){
+        level = Level;
+        SceneManager.LoadScene(Level, LoadSceneMode.Single);
+
+    }
+
 }
