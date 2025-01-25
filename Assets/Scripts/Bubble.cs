@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class Bubble : MonoBehaviour
 {
     private bool dificult;
     private int requiredClicks; 
     private int clicks = 0; 
+    private Image imageComponent;
+    
 
     void Start()
     {
@@ -15,18 +18,25 @@ public class Bubble : MonoBehaviour
         requiredClicks = dificult ? 2 : 1; 
 
         Debug.Log("Dificult: " + dificult + " Required Clicks: " + requiredClicks);
+
+        imageComponent = GetComponent<Image>();
     }
 
-   
-    private void OnMouseDown()
-    {
+    public void Clicked() {
+
         clicks++; 
         
         Debug.Log("Clicked: " + clicks);
 
         if (clicks >= requiredClicks)
         {
-            Destroy(gameObject); 
+            imageComponent.enabled = false;
         }
+
+    }
+   
+    private void OnMouseDown()
+    {
+        
     }
 }
