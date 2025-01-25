@@ -46,11 +46,4 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    public void ToLevelSelection(){
-        SceneManager.LoadScene("LevelSelection", LoadSceneMode.Single);
-    }
-
-    public void ToTutorial(){
-        SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
-    }
 }
