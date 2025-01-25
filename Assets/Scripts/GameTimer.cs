@@ -23,6 +23,7 @@ public class GameTimer : MonoBehaviour
         if (isGameActive)
         {
             currentTime -= Time.deltaTime;
+            
 
             if (currentTime <= 0)
             {
@@ -49,5 +50,17 @@ public class GameTimer : MonoBehaviour
     {
         isGameActive = false;
         levelCompleteCanvas.SetActive(true); 
+    }
+
+    public void PauseGame()
+    {
+        isGameActive = false;
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        isGameActive = true;
+        Time.timeScale = 1;
     }
 }
