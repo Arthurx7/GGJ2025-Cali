@@ -5,7 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private string nextSceneName;
     [SerializeField] private LayoutManager layoutManager;
-    [SerializeFiled] private int ExplodeBubbleCount = 0;
+    [SerializeField] private int ExplodeBubbleCount = 0;
 
 
     public void ExplodeBubble()

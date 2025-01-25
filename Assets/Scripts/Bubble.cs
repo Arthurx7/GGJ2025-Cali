@@ -9,10 +9,13 @@ public class Bubble : MonoBehaviour
     private int requiredClicks; 
     private int clicks = 0; 
     private Image imageComponent;
+
+    [SerializeField] private LevelManager levelManager;
     
 
     void Start()
     {
+        levelManager = FindObjectOfType<LevelManager>();
        
         dificult = Random.value > 0.5f; 
         requiredClicks = dificult ? 2 : 1; 
@@ -31,6 +34,7 @@ public class Bubble : MonoBehaviour
         if (clicks >= requiredClicks)
         {
             imageComponent.enabled = false;
+            levelManager.ExplodeBubble();
         }
 
     }
