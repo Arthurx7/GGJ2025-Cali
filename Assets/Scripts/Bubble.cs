@@ -30,7 +30,7 @@ public class Bubble : MonoBehaviour
         dificult = Random.value > 0.5f; 
         requiredClicks = dificult ? 2 : 1; 
 
-        Debug.Log("Dificult: " + dificult + " Required Clicks: " + requiredClicks);
+    
        
         imageComponent = GetComponent<Image>();
         buttonComponent = GetComponent<Button>();
@@ -49,8 +49,7 @@ public class Bubble : MonoBehaviour
             PlaySound(popSound);
             GameObject instantiatedEffect = Instantiate(effects2, transform.position, Quaternion.identity);
         }
-        
-        Debug.Log("Clicked: " + clicks);
+   
 
         if (clicks >= requiredClicks)
         {

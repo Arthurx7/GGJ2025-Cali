@@ -11,6 +11,8 @@ public class LevelManager : MonoBehaviour
     {
         layoutManager = FindObjectOfType<LayoutManager>();
         gameTimer = FindObjectOfType<GameTimer>();
+        Time.timeScale = 1;
+        print("Level: " + DATA.level);
     }
 
     public void ExplodeBubble()
@@ -40,9 +42,9 @@ public class LevelManager : MonoBehaviour
         }
 
         // Llamar a OnLevelCompleted para cambiar el sprite y habilitar el siguiente nivel
-        FindObjectOfType<MainMenu>().OnLevelCompleted(); // Aquí cambiaremos el sprite y habilitaremos el siguiente nivel
+        FindObjectOfType<MainMenu>().OnLevelCompleted(); // Aquï¿½ cambiaremos el sprite y habilitaremos el siguiente nivel
 
-        // Incrementar el nivel solo después de cambiar el sprite y habilitar el siguiente nivel
+        // Incrementar el nivel solo despuï¿½s de cambiar el sprite y habilitar el siguiente nivel
         DATA.level++;
 
         // Llamar al temporizador para indicar que el nivel ha sido ganado
@@ -58,6 +60,7 @@ public class LevelManager : MonoBehaviour
     public void ToMenu()
     {
         SceneManager.LoadScene("Inicio", LoadSceneMode.Single);
+        Time.timeScale = 1;
     }
 
     public void ToTrophies()
@@ -73,5 +76,6 @@ public class LevelManager : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 }
