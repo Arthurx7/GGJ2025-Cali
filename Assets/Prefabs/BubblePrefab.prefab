@@ -146,8 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cbcaa488e17d44b98e8b87a78ba2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effects: {fileID: 4558281882951068831, guid: 40defa1d1c14d3341a70eb822de794f1, type: 3}
+  effects: {fileID: 7769809101893177163, guid: 40defa1d1c14d3341a70eb822de794f1, type: 3}
   effects2: {fileID: 3940582429602302043, guid: e5c28f4890de6d541ba0aaa8880b52b2, type: 3}
+  levelManager: {fileID: 0}
   bubbleExplote: {fileID: 21300000, guid: 64733a15eef7fa34ab5db7d5294578d0, type: 3}
   audioSource: {fileID: -7467850700937359514}
   popSound: {fileID: 8300000, guid: 58318de5174d1f047bbe91075288587f, type: 3}

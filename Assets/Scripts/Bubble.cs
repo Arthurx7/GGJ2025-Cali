@@ -14,7 +14,7 @@ public class Bubble : MonoBehaviour
 
     [SerializeField] private GameObject effects; 
     [SerializeField] private GameObject effects2; 
-    // [SerializeField] private LevelManager levelManager;
+    [SerializeField] private LevelManager levelManager;
     [SerializeField] private Sprite bubbleExplote;
 
     //Sonidos 
@@ -25,7 +25,7 @@ public class Bubble : MonoBehaviour
 
     void Start()
     {
-        //levelManager = FindObjectOfType<LevelManager>();
+        levelManager = FindObjectOfType<LevelManager>();
        
         dificult = Random.value > 0.5f; 
         requiredClicks = dificult ? 2 : 1; 
@@ -60,7 +60,7 @@ public class Bubble : MonoBehaviour
 
             buttonComponent.interactable = false; 
             
-            //levelManager.ExplodeBubble(); 
+            levelManager.ExplodeBubble(); 
 
             GameObject instantiatedEffect = Instantiate(effects, transform.position, Quaternion.identity);
         }
