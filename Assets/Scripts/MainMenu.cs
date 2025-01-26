@@ -35,23 +35,12 @@ public class MainMenu : MonoBehaviour
                 buttonImage.sprite = initialLevelSprite; // Asignamos el sprite inicial
             }
         }
-       
+
+        // Habilitar solo el primer botón (nivel 0) al inicio
+        bots[0].interactable = true;
     }
 
-    void Update()
-    {
-        print(DATA.level);
-
-        // Inicializa todos los botones con el sprite inicial
-        for (int i = 0; i < DATA.level; i++)
-        {
-            bots[i].interactable = true;
-        }
-        
-       
-    }
-
-    // Cambia el sprite de un bot�n para indicar que el nivel est� completado
+    // Cambia el sprite de un botón para indicar que el nivel está completado
     public void SetLevelCompleted(int levelIndex)
     {
         if (levelIndex < bots.Length)
@@ -67,13 +56,13 @@ public class MainMenu : MonoBehaviour
     // Llamado cuando un nivel se ha completado
     public void OnLevelCompleted()
     {
-        // Cambiar el sprite del nivel completado (�ndice DATA.level - 1)
-        SetLevelCompleted(DATA.level - 1); // Cambiar el sprite del nivel actual (�ndice DATA.level - 1)
+        // Cambiar el sprite del nivel completado (índice DATA.level - 1)
+        SetLevelCompleted(DATA.level - 1); // Cambiar el sprite del nivel actual (índice DATA.level - 1)
 
-        /*// Habilitar el siguiente nivel (bot�n con �ndice DATA.level)
+        // Habilitar el siguiente nivel (botón con índice DATA.level)
         if (DATA.level < bots.Length)
         {
-            bots[DATA.level].interactable = true; // Habilitar el siguiente nivel (�ndice DATA.level)
-        }*/
-    }
+            bots[DATA.level].interactable = true; // Habilitar el siguiente nivel (índice DATA.level)
+        }
+    }
 }
