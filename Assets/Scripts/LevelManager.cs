@@ -18,53 +18,36 @@ public class LevelManager : MonoBehaviour
         ExplodeBubbleCount++;
         if (ExplodeBubbleCount >= layoutManager.count)
         {
-            CompleteLevel();
+            CompleteLevel(); // Llamamos a CompleteLevel cuando el nivel se complete
         }
     }
 
     public void CompleteLevel()
     {
+        // Marcar el nivel como completado
         switch (DATA.level)
         {
-            case 1:
-                DATA.Trophy1 = true;
-                break;
-            case 2:
-                DATA.Trophy2 = true;
-                break;
-            case 3:
-                DATA.Trophy3 = true;
-                break;
-            case 4:
-                DATA.Trophy4 = true;
-                break;
-            case 5:
-                DATA.Trophy5 = true;
-                break;
-            case 6:
-                DATA.Trophy6 = true;
-                break;
-            case 7:
-                DATA.Trophy7 = true;
-                break;
-            case 8:
-                DATA.Trophy8 = true;
-                break;
-            case 9:
-                DATA.Trophy9 = true;
-                break;
-            case 10:
-                DATA.Trophy10 = true;
-                break;
+            case 1: DATA.Trophy1 = true; break;
+            case 2: DATA.Trophy2 = true; break;
+            case 3: DATA.Trophy3 = true; break;
+            case 4: DATA.Trophy4 = true; break;
+            case 5: DATA.Trophy5 = true; break;
+            case 6: DATA.Trophy6 = true; break;
+            case 7: DATA.Trophy7 = true; break;
+            case 8: DATA.Trophy8 = true; break;
+            case 9: DATA.Trophy9 = true; break;
+            case 10: DATA.Trophy10 = true; break;
         }
 
+        // Llamar a OnLevelCompleted para cambiar el sprite y habilitar el siguiente nivel
+        FindObjectOfType<MainMenu>().OnLevelCompleted(); // Aquí cambiaremos el sprite y habilitaremos el siguiente nivel
+
+        // Incrementar el nivel solo después de cambiar el sprite y habilitar el siguiente nivel
         DATA.level++;
 
-        // Solo incrementamos el nivel, no cambiamos el sprite desde aquí
+        // Llamar al temporizador para indicar que el nivel ha sido ganado
         gameTimer.WinLevel();
     }
-
-
 
     public void ToSelectLevel(int level)
     {
