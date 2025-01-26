@@ -1008,11 +1008,11 @@ RectTransform:
   m_Children:
   - {fileID: 325010809}
   - {fileID: 40966112}
+  - {fileID: 1100572053}
+  - {fileID: 1132694277}
   - {fileID: 139355784}
   - {fileID: 1464470722}
   - {fileID: 265543061}
-  - {fileID: 1100572053}
-  - {fileID: 1132694277}
   - {fileID: 994865583}
   - {fileID: 653443660}
   m_Father: {fileID: 712575764}
@@ -1769,8 +1769,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -46.049988}
+  m_SizeDelta: {x: 0, y: 153.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &801280321
 MonoBehaviour:
@@ -2640,8 +2640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 46}
-  m_SizeDelta: {x: 410, y: 410}
+  m_AnchoredPosition: {x: 3.87, y: -3.25}
+  m_SizeDelta: {x: 986.28, y: 986.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132694278
 MonoBehaviour:
@@ -2663,7 +2663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 728b7b1c3c0c950489f30f098413b9b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f056492010039b04e9839e6a2973b7c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2727,11 +2727,11 @@ RectTransform:
   m_Children:
   - {fileID: 1277339428}
   - {fileID: 1099949869}
+  - {fileID: 1979334209}
+  - {fileID: 1896467143}
   - {fileID: 1906565802}
   - {fileID: 828198869}
   - {fileID: 1117979436}
-  - {fileID: 1979334209}
-  - {fileID: 1896467143}
   - {fileID: 1724958766}
   - {fileID: 1039216296}
   m_Father: {fileID: 712575764}
@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubble: {fileID: 4021137092750244203, guid: 5e6b5eabfead69d41a9450ed2d578a0f, type: 3}
   papel: {fileID: 801280320}
-  count: 20
+  count: 24
 --- !u!4 &1333826766
 Transform:
   m_ObjectHideFlags: 0
@@ -3301,7 +3301,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 84a8ac5dca150954881c9e93cd8e78f5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9f355285f070fdb44938a6901b1f0756, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -3591,7 +3591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1650eefe19c6db242890c090fe3ba8e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b217427d120782409ad659d7111fd6d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3643,8 +3643,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 46}
-  m_SizeDelta: {x: 410, y: 410}
+  m_AnchoredPosition: {x: 3.13, y: 1.87}
+  m_SizeDelta: {x: 967.47, y: 967.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896467144
 MonoBehaviour:
@@ -3666,7 +3666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0994f79f3c34dfe4e9ab17e95a657a30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2dd8e9534c06b6439d0de544a01ac93, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
