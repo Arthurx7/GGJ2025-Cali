@@ -3,23 +3,26 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private string nextSceneName;
     [SerializeField] private LayoutManager layoutManager;
     [SerializeField] private int ExplodeBubbleCount = 0;
-    [SerializeField] private int level = 0;
+    [SerializeField] private GameTimer gameTimer;
 
+    public void Start(){
+        layoutManager = FindObjectOfType<LayoutManager>();
+        gameTimer = FindObjectOfType<GameTimer>();
+    }
 
     public void ExplodeBubble()
     {
         ExplodeBubbleCount++;
         if (ExplodeBubbleCount >= layoutManager.count)
         {
-            CompleteLevel(level);
+            CompleteLevel();
         }
     }
-    public void CompleteLevel(int Level)
+    public void CompleteLevel()
     {
-        switch (Level)
+        switch (DATA.level)
         {
             case 1:
                 DATA.Trophy1 = true;
@@ -36,14 +39,45 @@ public class LevelManager : MonoBehaviour
             case 5:
                 DATA.Trophy5 = true;
                 break;
+            case 6:
+                DATA.Trophy6 = true;
+                break;
+            case 7:
+                DATA.Trophy7 = true;
+                break;
+            case 8:
+                DATA.Trophy8 = true;
+                break;
+            case 9:
+                DATA.Trophy9 = true;
+                break;
+            case 10:
+                DATA.Trophy10 = true;
+                break;
         }
-        SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
+        DATA.level++;
+        gameTimer.WinLevel();
     }
 
-    public void ToScene(int Level){
-        level = Level;
-        SceneManager.LoadScene(Level, LoadSceneMode.Single);
-
+    public void ToMenu()
+    {
+        SceneManager.LoadScene("Inicio", LoadSceneMode.Single);
     }
 
-}
+    public void ToTrophies()
+    {
+        SceneManager.LoadScene("Trophies", LoadSceneMode.Single);
+    }
+
+    public void ToNextLevel()
+    {
+       // SceneManager.LoadScene(DATA.level, LoadSceneMode.Single);
+       Debug.Log("Next Level:"+ DATA.level);
+    }
+    
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+}       

@@ -10,6 +10,8 @@ public class GameTimer : MonoBehaviour
     public GameObject defeatScreen; 
     public GameObject levelCompleteCanvas; 
 
+    public GameObject pauseCanvas;
+
     private bool isGameActive = true;
 
     void Start()
@@ -56,11 +58,13 @@ public class GameTimer : MonoBehaviour
     {
         isGameActive = false;
         Time.timeScale = 0;
+        pauseCanvas.SetActive(true);
     }
 
     public void ResumeGame()
     {
         isGameActive = true;
         Time.timeScale = 1;
+        pauseCanvas.SetActive(false);
     }
 }
