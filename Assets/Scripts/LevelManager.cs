@@ -7,7 +7,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private int ExplodeBubbleCount = 0;
     [SerializeField] private GameTimer gameTimer;
 
-    public void Start(){
+    public void Start()
+    {
         layoutManager = FindObjectOfType<LayoutManager>();
         gameTimer = FindObjectOfType<GameTimer>();
     }
@@ -20,6 +21,7 @@ public class LevelManager : MonoBehaviour
             CompleteLevel();
         }
     }
+
     public void CompleteLevel()
     {
         switch (DATA.level)
@@ -55,16 +57,20 @@ public class LevelManager : MonoBehaviour
                 DATA.Trophy10 = true;
                 break;
         }
+
         DATA.level++;
+
+        // Solo incrementamos el nivel, no cambiamos el sprite desde aquí
         gameTimer.WinLevel();
     }
+
+
 
     public void ToSelectLevel(int level)
     {
         DATA.level = level;
         SceneManager.LoadScene(level, LoadSceneMode.Single);
     }
-
 
     public void ToMenu()
     {
@@ -78,12 +84,11 @@ public class LevelManager : MonoBehaviour
 
     public void ToNextLevel()
     {
-       SceneManager.LoadScene(DATA.level, LoadSceneMode.Single);
+        SceneManager.LoadScene(DATA.level, LoadSceneMode.Single);
     }
-    
+
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-}       
+}
