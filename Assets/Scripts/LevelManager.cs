@@ -59,6 +59,13 @@ public class LevelManager : MonoBehaviour
         gameTimer.WinLevel();
     }
 
+    public void ToSelectLevel(int level)
+    {
+        DATA.level = level;
+        SceneManager.LoadScene(level, LoadSceneMode.Single);
+    }
+
+
     public void ToMenu()
     {
         SceneManager.LoadScene("Inicio", LoadSceneMode.Single);
@@ -71,8 +78,7 @@ public class LevelManager : MonoBehaviour
 
     public void ToNextLevel()
     {
-       // SceneManager.LoadScene(DATA.level, LoadSceneMode.Single);
-       Debug.Log("Next Level:"+ DATA.level);
+       SceneManager.LoadScene(DATA.level, LoadSceneMode.Single);
     }
     
     public void RestartLevel()
