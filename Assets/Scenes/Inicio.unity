@@ -1186,7 +1186,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 1726662005, guid: e59ab9f52981a4e4581ffc9c8c0ed2bc, type: 3}
+    m_PressedSprite: {fileID: -2134539037, guid: e59ab9f52981a4e4581ffc9c8c0ed2bc, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -2189,7 +2189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &956126934
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2280,7 +2280,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 1726662005, guid: e59ab9f52981a4e4581ffc9c8c0ed2bc, type: 3}
+    m_PressedSprite: {fileID: -2134539037, guid: e59ab9f52981a4e4581ffc9c8c0ed2bc, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -2371,7 +2371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1021660799
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3354,7 +3354,7 @@ GameObject:
   - component: {fileID: 1581402875}
   - component: {fileID: 1581402874}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
